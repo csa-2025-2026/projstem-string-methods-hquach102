@@ -1,8 +1,15 @@
+import java.util.Scanner;
+
 public class Main
 {
   public static void main(String[] args)
   {
-    stringManip("cream", "butter");
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Give A Word");
+    String w1 = scan.nextLine();
+    System.out.println("Give me anotha one");
+    String w2 = scan.nextLine();
+    stringManip(w1, w2);
   }
 
   /** Precondition: s1 and s2 are not null
@@ -25,21 +32,18 @@ public class Main
   */
   public static void stringManip(String s1, String s2)
   {
-    String output;
     String wrd1; 
     String wrd2;
     String wrd21;
-    String wrd22;
     
-     wrd1 = s1.toUpperCase();
-    wrd21 = s2.substring(0,1);
-  
     
-
-    
-  
-    wrd2 = s2.toUpperCase() + s2.toLowerCase();
+    wrd1 = s1.toUpperCase();
+    wrd2 = s2.substring(0,1).toUpperCase();
+    wrd21 = s2.substring(1);
+    wrd2 = wrd2 + wrd21;
     System.out.println(wrd1);
+    System.out.println(wrd2);
+    
     
   }
 
