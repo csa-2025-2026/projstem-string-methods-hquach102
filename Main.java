@@ -2,7 +2,7 @@ public class Main
 {
   public static void main(String[] args)
   {
-    
+    stringManip("cream", "butter");
   }
 
   /** Precondition: s1 and s2 are not null
@@ -25,7 +25,22 @@ public class Main
   */
   public static void stringManip(String s1, String s2)
   {
+    String output;
+    String wrd1; 
+    String wrd2;
+    String wrd21;
+    String wrd22;
+    
+     wrd1 = s1.toUpperCase();
+    wrd21 = s2.substring(0,1);
   
+    
+
+    
+  
+    wrd2 = s2.toUpperCase() + s2.toLowerCase();
+    System.out.println(wrd1);
+    
   }
 
   /** Precondition: s1 and s2 are not null
