@@ -4,12 +4,7 @@ public class Main
 {
   public static void main(String[] args)
   {
-    Scanner scan = new Scanner(System.in);
-    System.out.println("Give A Word");
-    String w1 = scan.nextLine();
-    System.out.println("Give me anotha one");
-    String w2 = scan.nextLine();
-    stringManip(w1, w2);
+    System.out.println(removeStr("bbbbadaboom", "ada"));
   }
 
   /** Precondition: s1 and s2 are not null
@@ -52,7 +47,19 @@ public class Main
   */
   public static String removeStr(String s1, String s2)
   {
-    String output = null;
+    String output;
+    String after;
+    String before;
+    
+    int FirstHalf = s1.indexOf(s2);
+    before = s1.substring(0, FirstHalf);
+    int SecondHalf = FirstHalf + s2.length();
+    after = s1.substring(SecondHalf);
+
+
+    output = before + after;
+
+
     return output;
   }
 }
